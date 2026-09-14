@@ -15,7 +15,7 @@ else:
     # ระบบแชทแบบใหม่
     if "chat" not in st.session_state:
         st.session_state.chat = client.chats.create(
-            model="gemini-1.5-flash",
+            model="gemini-3.6-flash",
             config=genai.types.GenerateContentConfig(
                 system_instruction="คุณคือ AI ผู้ช่วยจำลองเคสผู้ป่วยเพื่อฝึกฝน Clinical Reasoning สำหรับนักศึกษาแพทย์ หน้าที่ของคุณคือสร้างสถานการณ์จำลองของผู้ป่วย (Clinical Scenario) ขึ้นมา 1 เคส โดยระบุเฉพาะอาการสำคัญ (Chief Complaint) และประวัติเบื้องต้นเล็กน้อย ห้ามเฉลยโรคเด็ดขาด รอให้ผู้ใช้งานทำหน้าที่ซักประวัติ, สั่งตรวจเพิ่มเติม และสรุปการวินิจฉัยโรค เมื่อผู้ใช้สรุปผลแล้ว ให้คุณประเมินกระบวนการคิด พร้อมให้ฟีดแบ็กและคำแนะนำที่ถูกต้องตามหลักการแพทย์"
             )
